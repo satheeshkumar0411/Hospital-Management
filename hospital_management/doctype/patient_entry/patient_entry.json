@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-10-05 16:25:36.057168",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_type",
+  "costumer_name",
+  "column_break_v6mie",
+  "date",
+  "column_break_jjiv1",
+  "patient_details",
+  "patient_name",
+  "section_break_ysrw1",
+  "service",
+  "problem",
+  "doctor_name",
+  "lab_name",
+  "medicine_name",
+  "mrp",
+  "quantity",
+  "total_amount",
+  "confirm_appointment"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Patient or Costumer Type",
+   "options": "\nNew to Hospital\nOld to Hospital\nFor Buying Medicine",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.patient_type == 'Old to Hospital'",
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "label": "Patient Name",
+   "options": "Patient"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "depends_on": "eval:doc.patient_type == 'New to Hospital'",
+   "fieldname": "patient_details",
+   "fieldtype": "Link",
+   "label": "Create a New Patient Details",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Select",
+   "label": "Services",
+   "options": "\nUse the Doctor Services\nUse the Lab Services\nBuying Medicine"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Use the Doctor Services'",
+   "fieldname": "doctor_name",
+   "fieldtype": "Link",
+   "label": "Doctor Name",
+   "options": "Doctor"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Use the Lab Services'",
+   "fieldname": "lab_name",
+   "fieldtype": "Link",
+   "label": "Lab Name",
+   "options": "Lab Type"
+  },
+  {
+   "fieldname": "column_break_jjiv1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_v6mie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Use the Doctor Services'",
+   "fieldname": "problem",
+   "fieldtype": "Data",
+   "label": "Problem"
+  },
+  {
+   "fieldname": "section_break_ysrw1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "confirm_appointment",
+   "fieldtype": "Button",
+   "label": "Confirm"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Buying Medicine'",
+   "fieldname": "medicine_name",
+   "fieldtype": "Link",
+   "label": "Medicine Name",
+   "options": "Medicine Details"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Buying Medicine'",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Buying Medicine'",
+   "fetch_from": "medicine_name.mrp",
+   "fieldname": "mrp",
+   "fieldtype": "Currency",
+   "label": "MRP Per Tablet",
+   "options": "medicine_name"
+  },
+  {
+   "depends_on": "eval:doc.service == 'Buying Medicine'",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "depends_on": "eval:doc.patient_type == 'For Buying Medicine'",
+   "fieldname": "costumer_name",
+   "fieldtype": "Data",
+   "label": "Costumer Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-12 17:00:18.047678",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Patient Entry",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

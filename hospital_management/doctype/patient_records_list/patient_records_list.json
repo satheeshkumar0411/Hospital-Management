@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "autoname": ".#####",
+ "creation": "2023-10-06 16:10:56.968910",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_type",
+  "column_break_ygufx",
+  "patient_name",
+  "section_break_88oca",
+  "problem",
+  "service",
+  "date",
+  "column_break_4ofxh",
+  "doctor_name",
+  "lab_name",
+  "section_break_uqew9",
+  "medicine_name",
+  "quantity",
+  "column_break_ye515",
+  "mrp",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_type",
+   "fieldtype": "Data",
+   "label": "Patient Type"
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "label": "Service"
+  },
+  {
+   "fieldname": "problem",
+   "fieldtype": "Data",
+   "label": "Problem"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor Name"
+  },
+  {
+   "fieldname": "lab_name",
+   "fieldtype": "Data",
+   "label": "Lab Name"
+  },
+  {
+   "fieldname": "column_break_ygufx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_88oca",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4ofxh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medicine_name",
+   "fieldtype": "Data",
+   "label": "Medicine Name"
+  },
+  {
+   "fieldname": "section_break_uqew9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "mrp",
+   "fieldtype": "Data",
+   "label": "MRP"
+  },
+  {
+   "fieldname": "column_break_ye515",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Data",
+   "label": "Total Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-12 12:13:45.525415",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Patient Records List",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

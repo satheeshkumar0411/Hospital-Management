@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "autoname": "field:medicine_names",
+ "creation": "2023-10-05 22:00:32.341115",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medicine_names",
+  "quantity",
+  "refill_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "medicine_names",
+   "fieldtype": "Link",
+   "label": "Medicine Name",
+   "options": "Medicine Details",
+   "unique": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "refill_item",
+   "fieldtype": "Button",
+   "label": "Refill"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-12 17:36:56.529933",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Refill Medicine Details",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
